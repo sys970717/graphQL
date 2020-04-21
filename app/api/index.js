@@ -23,6 +23,15 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }));
 
+app.get('/', (req, res, next) => {
+  const arr = ['ww'];
+  arr.forEach((name) => {
+    console.log('1');
+  });
+
+  res.send('asd');
+})
+
 app.listen(4000, () => {
   console.log('Now process to localhost:4000/graphql');
 });
